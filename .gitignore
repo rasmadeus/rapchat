@@ -32,5 +32,4 @@
 *.app
 
 # VS
-out
 .vs
