@@ -8,6 +8,7 @@ target_compile_definitions(rap PRIVATE "RAP_LIBRARY")
 
 install(
     TARGETS rap
+    EXPORT rap_targets
     RUNTIME DESTINATION bin
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
@@ -19,4 +20,10 @@ install(
         rap.h
     DESTINATION
         include/rap
+)
+
+install(
+    EXPORT rap_targets
+    FILE rap.cmake
+    DESTINATION find
 )
