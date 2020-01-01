@@ -3,7 +3,7 @@ add_executable(
     main.cpp
 )
 
-find_package(rap) 
+find_package(rap REQUIRED) 
 target_link_libraries(client rap)
 
 install(
