@@ -1,9 +1,7 @@
-#pragma warning(disable: 4251)
-#include <iostream>
-#include <message.h>
+#include <gtest/gtest.h>
 
-int main([[maybe_unused]] char** argv, [[maybe_unused]] int argc)
+int main(int argc, char** argv)
 {
-    std::cout << "Hello world!";
-    return 0;
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }

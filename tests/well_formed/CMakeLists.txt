@@ -1,6 +1,7 @@
 add_executable(
     well_formed
     main.cpp
+    message_test.cpp
 )
 
 target_compile_features(
@@ -15,7 +16,17 @@ target_compile_options(
         $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -pedantic -Werror>
 )
 
+target_include_directories(
+    well_formed
+    PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+find_package(GTest REQUIRED)
+
 target_link_libraries(
     well_formed
-    PUBLIC rapchat
+    rapchat
+    GTest::GTest
 )
+
+add_test(NAME MessageUnitTest COMMAND well_formed)

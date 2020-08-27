@@ -10,5 +10,7 @@ project(
 
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
 
+enable_testing()
+
 add_subdirectory(libs)
 add_subdirectory(tests)
