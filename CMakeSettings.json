@@ -13,7 +13,25 @@
             "variables": [
                 {
                     "name": "CMAKE_PREFIX_PATH",
-                    "value": "C:\\\\\\\\Users\\\\\\\\rasmadeus\\\\\\\\Documents\\\\\\\\dev\\\\\\\\sdk\\\\\\\\boost_1_71_0;C:\\\\Users\\\\rasmadeus\\\\Documents\\\\dev\\\\sdk\\\\5.13.0\\\\msvc2017_64;C:\\Users\\rasmadeus\\Documents\\dev\\sdk\\googletest\\out\\install\\x64-Debug",
+                    "value": "C:\\Users\\rasmadeus\\Documents\\dev\\sdk\\googletest\\out\\install\\x64-Debug",
+                    "type": "PATH"
+                }
+            ]
+        },
+        {
+            "name": "x64-Release",
+            "generator": "Ninja",
+            "configurationType": "RelWithDebInfo",
+            "buildRoot": "${projectDir}\\out\\build\\${name}",
+            "installRoot": "${projectDir}\\out\\install\\${name}",
+            "cmakeCommandArgs": "",
+            "buildCommandArgs": "",
+            "ctestCommandArgs": "",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "variables": [
+                {
+                    "name": "CMAKE_PREFIX_PATH",
+                    "value": "C:\\Users\\rasmadeus\\Documents\\dev\\sdk\\googletest\\out\\install\\x64-Release",
                     "type": "PATH"
                 }
             ]

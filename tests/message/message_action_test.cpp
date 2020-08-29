@@ -1,9 +1,17 @@
-#include "message_test.h"
+#include <gtest/gtest.h>
+#include <message.h>
 
-void MessageUnitTest::SetUp()
+class MessageUnitTest : public testing::TestWithParam<std::string>
 {
-    m_action = GetParam();
-}
+protected:
+    void SetUp() override
+    {
+        m_action = GetParam();
+    }
+
+protected:
+    std::string m_action;
+};
 
 TEST_P(MessageUnitTest, Check_Action_Via_Message_Constructor)
 {
@@ -18,7 +26,7 @@ TEST_P(MessageUnitTest, Check_Action_Via_Message_Set_Method)
     ASSERT_EQ(m_action, message.action());
 }
 
-INSTANTIATE_TEST_CASE_P
+INSTANTIATE_TEST_SUITE_P
 (
     MessageUnitTestCases,
     MessageUnitTest,

@@ -1,1 +1,1 @@
-add_subdirectory(well_formed)
+add_subdirectory(message)
