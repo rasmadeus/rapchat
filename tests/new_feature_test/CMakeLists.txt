@@ -1,7 +1,7 @@
 add_executable(
     new_feature_test
     main.cpp
-)
+ "io_service_timer.h")
 
 target_compile_features(
     new_feature_test
