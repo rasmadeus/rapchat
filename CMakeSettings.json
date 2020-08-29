@@ -13,7 +13,7 @@
             "variables": [
                 {
                     "name": "CMAKE_PREFIX_PATH",
-                    "value": "C:\\Users\\rasmadeus\\Documents\\dev\\sdk\\googletest\\out\\install\\x64-Debug",
+                    "value": "C:\\Users\\rasmadeus\\Documents\\dev\\sdk\\googletest\\out\\install\\x64-Debug;C:\\Users\\rasmadeus\\Documents\\dev\\sdk\\boost_1_74_0",
                     "type": "PATH"
                 }
             ]
@@ -31,7 +31,7 @@
             "variables": [
                 {
                     "name": "CMAKE_PREFIX_PATH",
-                    "value": "C:\\Users\\rasmadeus\\Documents\\dev\\sdk\\googletest\\out\\install\\x64-Release",
+                    "value": "C:\\Users\\rasmadeus\\Documents\\dev\\sdk\\googletest\\out\\install\\x64-Release;;C:\\Users\\rasmadeus\\Documents\\dev\\sdk\\boost_1_74_0",
                     "type": "PATH"
                 }
             ]

@@ -1,1 +1,2 @@
 add_subdirectory(message)
+add_subdirectory(new_feature_test)
