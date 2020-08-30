@@ -4,10 +4,11 @@
 #include <boost/asio/steady_timer.hpp>
 #include <chrono>
 #include <iostream>
+#include <thread>
 
 namespace rapchat
 {
-    inline void wait_timer()
+    inline void wait_timer_thread()
     {
         boost::asio::io_service ioService;
         boost::asio::steady_timer timer1{ioService, std::chrono::seconds{3}};
@@ -23,6 +24,7 @@ namespace rapchat
                       << "\n";
         });
 
-        ioService.run();
+        std::thread ioServiceRunner{[&ioService] { ioService.run(); }};
+        ioServiceRunner.join();
     }
 } // namespace rapchat
