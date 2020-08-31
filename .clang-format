@@ -1,4 +1,5 @@
 ﻿---
+AccessModifierOffset: '-4'
 AlignAfterOpenBracket: DontAlign
 AlignConsecutiveAssignments: 'false'
 AlignConsecutiveDeclarations: 'false'
@@ -6,7 +7,7 @@ AlignEscapedNewlines: DontAlign
 AlignOperands: 'false'
 AlignTrailingComments: 'false'
 AllowAllParametersOfDeclarationOnNextLine: 'false'
-AllowShortBlocksOnASingleLine: 'true'
+AllowShortBlocksOnASingleLine: 'false'
 AllowShortCaseLabelsOnASingleLine: 'true'
 AllowShortFunctionsOnASingleLine: InlineOnly
 AllowShortIfStatementsOnASingleLine: 'true'
@@ -15,9 +16,11 @@ AlwaysBreakAfterReturnType: None
 AlwaysBreakBeforeMultilineStrings: 'true'
 AlwaysBreakTemplateDeclarations: 'Yes'
 BinPackArguments: 'false'
+BinPackParameters: 'false'
+BreakBeforeBraces: Custom
 BraceWrapping:
     AfterClass: 'true'
-    AfterControlStatement: 'true'
+    AfterControlStatement: 'false'
     AfterEnum: 'true'
     AfterFunction: 'true'
     AfterNamespace: 'true'
@@ -27,13 +30,12 @@ BraceWrapping:
     AfterExternBlock: 'true'
     BeforeCatch: 'true'
     BeforeElse: 'true'
-    IndentBraces: 'true'
+    IndentBraces: 'false'
     SplitEmptyFunction: 'true'
     SplitEmptyRecord: 'true'
     SplitEmptyNamespace: 'true'
 BreakAfterJavaFieldAnnotations: 'true'
 BreakBeforeBinaryOperators: All
-BreakBeforeBraces: Custom
 BreakBeforeTernaryOperators: 'true'
 BreakConstructorInitializers: BeforeComma
 BreakInheritanceList: BeforeComma
@@ -42,6 +44,7 @@ CompactNamespaces: 'false'
 ConstructorInitializerAllOnOneLineOrOnePerLine: 'true'
 ConstructorInitializerIndentWidth: '4'
 ContinuationIndentWidth: '4'
+ColumnLimit: '0'
 Cpp11BracedListStyle: 'true'
 FixNamespaceComments: 'true'
 IncludeBlocks: Regroup
