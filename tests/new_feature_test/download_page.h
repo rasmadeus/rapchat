@@ -46,7 +46,9 @@ namespace rapchat
                 std::cout << "ResolveHandler error: " << ec.message() << "\n";
             }
             else {
-                m_tcpSocket.async_connect(*endpoints.begin(), std::bind(&PageDownloader::connectHandler, this, std::placeholders::_1));
+                m_tcpSocket.async_connect(
+                    *endpoints.begin(),
+                    std::bind(&PageDownloader::connectHandler, this, std::placeholders::_1));
             }
         }
 
@@ -58,7 +60,9 @@ namespace rapchat
             else {
                 std::string const request{"GET / HTTP/1.1\r\nHost: theboostcpplibraries.com\r\n\r\n"};
                 boost::asio::write(m_tcpSocket, boost::asio::buffer(request));
-                m_tcpSocket.async_read_some(boost::asio::buffer(m_bytes), std::bind(&PageDownloader::readHandler, this, std::placeholders::_1, std::placeholders::_2));
+                m_tcpSocket.async_read_some(
+                    boost::asio::buffer(m_bytes),
+                    std::bind(&PageDownloader::readHandler, this, std::placeholders::_1, std::placeholders::_2));
             }
         }
 
